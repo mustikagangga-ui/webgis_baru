@@ -18,14 +18,14 @@ export default function SelectionPage() {
             {w}
           </Link>
         ))}
-        <Link href="/parameter" className="hover:text-gray-300 border-b border-white pb-1">WEBGIS</Link>
+        <Link href="https://69801f18d1a3d0806703ad70--webgisphrsumur.netlify.app/" target="_blank" className="hover:text-gray-300 border-b border-white pb-1">WEBGIS</Link>
         <Link href="/" className="hover:text-gray-300 border-b border-white pb-1">DASHBOARD</Link>
       </nav>
 
          
       {/* Judul Utama */}
       <div className="mt-12 md:mt-32 mb-10 md:mb-16 text-center z-10 px-4">
-        <Link href="/parameter">
+        <Link href="https://69801f18d1a3d0806703ad70--webgisphrsumur.netlify.app/" target="_blank">
           <h1 className="text-2xl md:text-4xl font-bold tracking-[0.2em] uppercase hover:text-gray-200 hover:scale-105 transition-all">
             AKSES WEBGIS PETA INTERAKTIF
           </h1>
