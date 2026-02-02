@@ -22,6 +22,7 @@ export default function SelectionPage() {
         <Link href="/" className="hover:text-gray-300 border-b border-white pb-1">DASHBOARD</Link>
       </nav>
 
+         
       {/* Judul Utama */}
       <div className="mt-12 md:mt-32 mb-10 md:mb-16 text-center z-10 px-4">
         <Link href="/parameter">

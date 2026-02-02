@@ -18,7 +18,7 @@ function DashboardContent() {
   
   const [activeWell, setActiveWell] = useState(wellParam);
   const [activeMap, setActiveMap] = useState('Peta Orthophoto');
-
+    
   useEffect(() => {
     if (wellParam) setActiveWell(wellParam);
   }, [wellParam]);
@@ -33,6 +33,7 @@ function DashboardContent() {
                 "Peta Hillshade", 
                 "Peta Line Density", 
                 "Peta Indikatif Areal Perhutanan Sosial (PIAPS)"];
+  
   // Fungsi untuk mencocokkan nama file sesuai gambar VS Code Anda
   const getFileName = (mapName: string, wellName: string) => {
     // Mengambil kata kunci dari nama peta (misal: "Topografi")
@@ -111,7 +112,19 @@ function DashboardContent() {
             >
               {map.toUpperCase()}
             </button>
-          ))}
+            ))}
+          
+          {/* 2. Tombol Khusus KMB (Logika ini harus mengenali variabel 'well' di atas) */}
+          {wellParam === "KMB-001" && (
+            <button 
+              onClick={() => setActiveMap("Peta Rawan Bencana")}
+              className={`whitespace-nowrap md:whitespace-normal text-left text-[10px] md:text-xs tracking-widest px-4 py-3 rounded-full transition-all cursor-pointer ${
+                activeMap === ("rawanbencana") ? 'bg-white text-red-900 font-extrabold shadow-md' : 'text-white/50 hover:bg-white/5 hover:text-white'
+              }`}
+              >
+                PETA RAWAN BENCANA
+            </button>
+            )}
         </motion.aside>
 
         {/* Display Peta Utama: Menggunakan kursor Crosshair agar terasa seperti GIS */}
