@@ -23,18 +23,18 @@ export default function LandingPage() {
           src="/logo_PHR.png" 
           alt="Logo PHR" 
           draggable="false" // Ini mencegah gambar diseret/dipindah
-          className="h-10 md:h-12 w-auto object-contain select-none pointer-events-none" 
+          className="h-20 md:h-20 w-auto object-contain select-none pointer-events-none" 
         />
         
         {/* Garis Pemisah Tipis (Opsional, agar terlihat lebih rapi) */}
-        <div className="h-8 w-[1px] bg-gray-300"></div>
+        <div className="h-15 w-[1px] bg-gray-300"></div>
         
         {/* Logo ITB (Sebelah Kanan Logo PHR) */}
         <img 
           src="/logo_itb.png" 
           alt="Logo ITB" 
           draggable="false" // Ini mencegah gambar diseret/dipindah
-          className="h-10 md:h-12 w-auto object-contain select-none pointer-events-none" 
+          className="h-20 md:h-20 w-auto object-contain select-none pointer-events-none" 
         />
       </div>
 
@@ -47,7 +47,7 @@ export default function LandingPage() {
           </p>
 
           <Link href="/selection">
-            <motion.button className="bg-red-800 text-white px-16 py-4 rounded-full text-sm font-bold tracking-[0.3em] hover:bg-red-900 hover:scale-105 transition-all uppercase active:scale-95 cursor-pointer">
+            <motion.button className="bg-red-800 text-white px-16 py-4 rounded-full text-base font-bold tracking-[0.3em] hover:bg-red-900 hover:scale-105 transition-all uppercase active:scale-95 cursor-pointer">
               MASUK
             </motion.button>
           </Link>
@@ -56,7 +56,7 @@ export default function LandingPage() {
 
       <footer className="p-10 text-center">
         <p className="text-[10px] text-gray-400 tracking-[0.4em] uppercase font-semibold">
-          dibuat oleh: MGN, NKAS, RR
+          dibuat oleh: Rianti, Gangga, Nazwa
         </p>
       </footer>
     </div>

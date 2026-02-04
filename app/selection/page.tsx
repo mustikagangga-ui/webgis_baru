@@ -7,26 +7,25 @@ export default function SelectionPage() {
 
   return (
     <div className="min-h-screen bg-red-900 flex flex-col items-center font-sans text-white p-6 md:p-10 relative overflow-x-hidden select-none cursor-default">
-      {/* Navbar Atas */}
-      <nav className="w-full md:absolute top-0 right-0 p-6 flex justify-center md:justify-end gap-6 text-[10px] font-bold tracking-widest uppercase z-20">
-        {wells.map((w) => (
-          <Link 
-            key={w} 
-            href={`/parameter?well=${w}`} 
-            className="hover:text-gray-300 transition-colors cursor-pointer"
-          >
-            {w}
-          </Link>
-        ))}
-        <Link href="https://69801f18d1a3d0806703ad70--webgisphrsumur.netlify.app/" target="_blank" className="hover:text-gray-300 border-b border-white pb-1">WEBGIS</Link>
-        <Link href="/" className="hover:text-gray-300 border-b border-white pb-1">DASHBOARD</Link>
-      </nav>
+      {/* 1. GAMBAR BACKGROUND FULL */}
+<div className="absolute inset-0 z-0 pointer-events-none"> {/* Tambahkan pointer-events-none di sini */}
+  <img
+    src="/gajah_bg.png"
+    alt="Background Full"
+    draggable="false"
+    className="w-full h-full object-cover opacity-30" 
+  />
+</div>
 
+      {/* Navbar Atas */}
+      <nav className="w-full md:absolute top-5 right-10 p-6 flex justify-center md:justify-end gap-6 text-[10px] font-bold tracking-widest uppercase z-20">
+        <Link href="/" className="hover:text-gray-300">DASHBOARD</Link>
+      </nav>
          
       {/* Judul Utama */}
       <div className="mt-12 md:mt-32 mb-10 md:mb-16 text-center z-10 px-4">
-        <Link href="https://69801f18d1a3d0806703ad70--webgisphrsumur.netlify.app/" target="_blank">
-          <h1 className="text-2xl md:text-4xl font-bold tracking-[0.2em] uppercase hover:text-gray-200 hover:scale-105 transition-all">
+        <Link href="https://webgissumurphr.netlify.app/" target="_blank">
+          <h1 className="text-2xl md:text-4xl font-bold tracking-[0.2em] uppercase hover:text-gray-200 underline decoration-3 underline-offset-6 hover:scale-105 transition-all">
             AKSES WEBGIS PETA INTERAKTIF
           </h1>
         </Link>
@@ -54,9 +53,9 @@ export default function SelectionPage() {
         </div>
 
         {/* Nama Sumur dengan kontras terbalik */}
-<span className="text-xl md:text-2xl font-bold tracking-[0.2em] uppercase transition-all duration-300 select-none text-white/40 group-hover:text-white group-hover:scale-110">
-  {well}
-</span>
+        <span className="text-xl md:text-2xl font-bold tracking-[0.2em] uppercase transition-all duration-300 select-none text-white/40 group-hover:text-white group-hover:scale-110">
+          {well}
+        </span>
       </div>
     </Link>
   ))}
