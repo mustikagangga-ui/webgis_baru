@@ -46,7 +46,7 @@ export default function SelectionPage() {
         <div className="w-full max-w-[240px] aspect-square bg-white/10 rounded-xl mb-4 flex items-center justify-center overflow-hidden border border-white/20 group-hover:border-white transition-all shadow-xl">
           <img 
             // Memanggil gambar berdasarkan nama: alr-001.png, kmb-001.png, atau cla-001.png
-            src={`/${well.toLowerCase()}.png`} 
+            src={`/maps/${well.toLowerCase()}.png`}
             alt={`${well}`} 
             draggable="false"
             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110 pointer-events-none"
