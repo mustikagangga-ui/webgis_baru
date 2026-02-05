@@ -23,7 +23,7 @@ export default function LandingPage() {
           src="/logo_PHR.png" 
           alt="Logo PHR" 
           draggable="false" // Ini mencegah gambar diseret/dipindah
-          className="h-20 md:h-20 w-auto object-contain select-none pointer-events-none" 
+          className="h-10 md:h-20 w-auto object-contain select-none pointer-events-none" 
         />
         
         {/* Garis Pemisah Tipis (Opsional, agar terlihat lebih rapi) */}
@@ -34,7 +34,7 @@ export default function LandingPage() {
           src="/logo_itb.png" 
           alt="Logo ITB" 
           draggable="false" // Ini mencegah gambar diseret/dipindah
-          className="h-20 md:h-20 w-auto object-contain select-none pointer-events-none" 
+          className="h-10 md:h-20 w-auto object-contain select-none pointer-events-none" 
         />
       </div>
 
