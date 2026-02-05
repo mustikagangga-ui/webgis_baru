@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-// --- DATA COORDINATES ---
+// --- DATA KOORDINAT ---
 const dataProfilKMB = [
   { id: 1, top: '62.1%', left: '13.3%', nama: 'a' },
   { id: 2, top: '59.58%', left: '13.55%', nama: 'b' },
@@ -27,7 +27,6 @@ const dataProfilKMB = [
   { id: 19, top: '16.74%', left: '17.8%', nama: 's' },
   { id: 20, top: '14.22%', left: '18.05%', nama: 't' },
   { id: 21, top: '11.7%', left: '18.3%', nama: 'u' },
-
   { id: 22, top: '5.60%', left: '23.33%', nama: '1' },
   { id: 23, top: '6.20%', left: '26.81%', nama: '2' },
   { id: 24, top: '6.80%', left: '30.29%', nama: '3' },
@@ -81,7 +80,7 @@ function DashboardContent() {
   const wellCode = activeWell.toLowerCase().split('-')[0];
   const folder = format === 'png' ? 'maps' : 'documents';
   
-  // Gunakan toUpperCase untuk memastikan pengecekan menu akurat
+  // toUpperCase untuk memastikan pengecekan menu akurat
   const isPIAPS = activeMap.toUpperCase().includes("PIAPS");
   const isProfil = activeMap.toUpperCase().includes("PROFIL");
 
@@ -111,7 +110,7 @@ function DashboardContent() {
 
   const wells = ["ALR-001", "KMB-001", "CLA-001"];
   const maps = [
-    "Peta Orthophoto", "Peta Topografi", "Peta Elevasi", 
+    "Peta Orthophoto", "Peta DTM", "Peta Elevasi", 
     "Peta Kelerengan", "Peta Profil Memanjang dan Melintang", 
     "Peta Geologi", "Peta Hillshade", "Peta Line Density", 
     "Peta Indikatif Areal Perhutanan Sosial (PIAPS)"
@@ -127,12 +126,12 @@ function DashboardContent() {
     }
   };
 
-  // Fungsi untuk mencocokkan nama file sesuai gambar VS Code Anda
+  // Fungsi untuk mencocokkan nama file sesuai gambar
   const getFileName = (mapName: string, wellName: string) => {
     // Mengambil kata kunci dari nama peta (misal: "Topografi")
     const mapKey = mapName.toLowerCase().replace("peta ", "").replace(" ", "");
     
-    // Penyesuaian suffix berdasarkan sumur (sesuai folder public/maps Anda)
+    // Penyesuaian suffix berdasarkan sumur (sesuai folder public/maps)
     let suffix = wellName.toLowerCase();
     if (wellName === "CLA-001") suffix = "cla"; 
     if (wellName === "KMB-001") suffix = "kmb";
@@ -221,18 +220,7 @@ function DashboardContent() {
               {map.toUpperCase()}
             </button>
             ))}
-          
-          {/* 2. Tombol Khusus KMB (Logika ini harus mengenali variabel 'well' di atas) */}
-          {wellParam === "KMB-001" && (
-            <button 
-              onClick={() => setActiveMap("Peta Rawan Bencana")}
-              className={`whitespace-nowrap md:whitespace-normal text-left text-[10px] md:text-xs tracking-widest px-4 py-3 rounded-full transition-all cursor-pointer ${
-                activeMap === ("rawanbencana") ? 'bg-white text-red-900 font-extrabold shadow-md' : 'text-white/50 hover:bg-white/5 hover:text-white'
-              }`}
-              >
-                PETA RAWAN BENCANA
-            </button>
-            )}    
+                     
         </motion.aside>  
   
         {/* Display Peta Utama: Menggunakan kursor Crosshair agar terasa seperti GIS */}
