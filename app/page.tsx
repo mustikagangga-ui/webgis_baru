@@ -17,24 +17,24 @@ export default function LandingPage() {
       </div>
 
       {/* SEKSI LOGO (Pojok Kiri Atas) */}
-      <div className="absolute top-8 left-16 z-20 flex items-center gap-4 select-none">
+      <div className="absolute top-0 w-full p-6 flex flex-row md:flex-row items-center justify-center md:justify-start gap-4 z-20">
         {/* Logo PHR */}
         <img 
           src="/logo_PHR.png" 
           alt="Logo PHR" 
           draggable="false" // Ini mencegah gambar diseret/dipindah
-          className="h-10 md:h-20 w-auto object-contain select-none pointer-events-none" 
+          className="h-10 md:h-18 w-auto object-contain select-none pointer-events-none" 
         />
         
         {/* Garis Pemisah Tipis (Opsional, agar terlihat lebih rapi) */}
-        <div className="h-15 w-[1px] bg-gray-300"></div>
+        <div className="h-10 w-[1px] bg-gray-300"></div>
         
         {/* Logo ITB (Sebelah Kanan Logo PHR) */}
         <img 
           src="/logo_itb.png" 
           alt="Logo ITB" 
           draggable="false" // Ini mencegah gambar diseret/dipindah
-          className="h-10 md:h-20 w-auto object-contain select-none pointer-events-none" 
+          className="h-10 md:h-18 w-auto object-contain select-none pointer-events-none" 
         />
       </div>
 
