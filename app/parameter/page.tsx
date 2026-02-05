@@ -271,8 +271,8 @@ function DashboardContent() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="flex-1 flex items-center justify-center p-4 bg-gray-50 overflow-auto">
-              <div className="relative inline-block max-w-full shadow-lg border border-gray-200">
+              className="flex-1 flex items-center justify-center p-4 bg-gray-50flex-1 flex items-center justify-center p-4 bg-gray-50 overflow-hidden">
+              <div className="relative inline-block shadow-lg border border-gray-200 rounded-lg overflow-hidden bg-white">
                 <img 
                   src={
                     activeMap === "Peta Profil Memanjang dan Melintang"
@@ -283,7 +283,7 @@ function DashboardContent() {
                   }
                   alt="Peta" 
                   draggable="false"
-                  className="w-full h-auto max-h-[75vh] object-contain transition-transform duration-500 group-hover:scale-[1.01] block mx-auto"
+                  className="w-full h-auto max-h-[73vh] object-contain transition-transform duration-500 group-hover:scale-[1.01] block mx-auto"
                   onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/800x500?text=DATA+BELUM+TERSEDIA"; }} 
                 />
 
